@@ -23,10 +23,7 @@
 
 &lt { flavor = "hold-preferred"; };
 
-&sk {
-    release-after-ms = <1200>;
-    quick-release;
-};
+&sk { release-after-ms = <1200>; };
 
 / {
     combos { compatible = "zmk,combos"; };
