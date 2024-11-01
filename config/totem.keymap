@@ -32,9 +32,9 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        sh1: sh1 {
+        sh: sh {
             compatible = "zmk,behavior-hold-tap";
-            label = "SH1";
+            label = "SH";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
@@ -42,42 +42,7 @@
             hold-while-undecided;
             hold-while-undecided-linger;
             flavor = "hold-preferred";
-        };
-
-        sh2: sh2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SH2";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            flavor = "hold-preferred";
-        };
-
-        sh3: sh3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SH3";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            flavor = "hold-preferred";
-        };
-
-        sh4: sh4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SH4";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            flavor = "hold-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37>;
         };
     };
 
@@ -109,10 +74,10 @@
 
         mod_sym {
             bindings = <
-        &trans            &trans            &trans          &trans          &trans    &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT
-        &sh1 LSHFT LSHFT  &sh2 LCTRL LCTRL  &sh3 LALT LALT  &sh4 LGUI LGUI  &trans    &kp TILDE        &kp LBKT              &kp RBKT               &kp HASH     &kp PIPE
-&trans  &trans            &trans            &trans          &trans          &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
-                                            &trans          &trans          &trans    &kp UNDERSCORE   &kp EQUAL             &trans
+        &trans           &trans                         &trans                 &trans                 &trans    &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT
+        &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &trans    &kp TILDE        &kp LBKT              &kp RBKT               &kp HASH     &kp PIPE
+&trans  &trans           &trans                         &trans                 &trans                 &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
+                                                        &trans                 &trans                 &trans    &kp UNDERSCORE   &kp EQUAL             &trans
             >;
         };
 
