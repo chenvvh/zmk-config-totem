@@ -32,9 +32,57 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        sh: sh {
+        sh1: sh1 {
             compatible = "zmk,behavior-hold-tap";
-            label = "SH";
+            label = "SH1";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            flavor = "tap-preferred";
+        };
+
+        sh2: sh2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SH2";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            flavor = "tap-preferred";
+        };
+
+        sh3: sh3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SH3";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            flavor = "tap-preferred";
+        };
+
+        sh4: sh4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SH4";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
@@ -64,19 +112,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q  &kp W  &kp E               &kp R        &kp T        &kp Y      &kp U                   &kp I               &kp O    &kp P
-            &kp A  &kp S  &kp D               &kp F        &kp G        &kp H      &kp J                   &kp K               &kp L    &kp SEMI
-&kp ESCAPE  &kp Z  &kp X  &kp C               &kp V        &kp B        &kp N      &kp M                   &kp COMMA           &kp DOT  &kp FSLH  &kp APOS
-                          &lt 3 C_PLAY_PAUSE  &lt 2 ENTER  &lt 1 TAB    &kp SPACE  &mt RIGHT_SHIFT ESCAPE  &lt 3 C_PLAY_PAUSE
+            &kp Q  &kp W  &kp E               &kp R        &kp T        &kp Y      &kp U                   &kp I         &kp O    &kp P
+            &kp A  &kp S  &kp D               &kp F        &kp G        &kp H      &kp J                   &kp K         &kp L    &kp SEMI
+&kp ESCAPE  &kp Z  &kp X  &kp C               &kp V        &kp B        &kp N      &kp M                   &kp COMMA     &kp DOT  &kp FSLH  &kp APOS
+                          &lt 3 C_PLAY_PAUSE  &lt 2 ENTER  &lt 1 TAB    &kp SPACE  &mt RIGHT_SHIFT ESCAPE  &lt 3 C_MUTE
             >;
         };
 
         mod_sym {
             bindings = <
-        &trans           &trans           &trans         &trans         &trans    &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT
-        &sh LSHFT LSHFT  &sh LCTRL LCTRL  &sh LALT LALT  &sh LGUI LGUI  &trans    &kp TILDE        &kp LBKT              &kp RBKT               &kp HASH     &kp PIPE
-&trans  &trans           &trans           &trans         &trans         &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
-                                          &trans         &trans         &trans    &kp UNDERSCORE   &kp EQUAL             &trans
+        &trans            &trans            &trans          &trans          &trans    &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT
+        &sh1 LSHFT LSHFT  &sh2 LCTRL LCTRL  &sh3 LALT LALT  &sh4 LGUI LGUI  &trans    &kp TILDE        &kp LBKT              &kp RBKT               &kp HASH     &kp PIPE
+&trans  &trans            &trans            &trans          &trans          &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
+                                            &trans          &trans          &trans    &kp UNDERSCORE   &kp EQUAL             &trans
             >;
         };
 
