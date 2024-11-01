@@ -23,8 +23,6 @@
 
 &lt { flavor = "hold-preferred"; };
 
-&sk { release-after-ms = <1200>; };
-
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -39,7 +37,6 @@
             hold-while-undecided;
             hold-while-undecided-linger;
             flavor = "hold-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37>;
         };
     };
 
@@ -73,7 +70,7 @@
             bindings = <
         &trans           &trans                         &trans                 &trans                 &trans    &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT
         &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &trans    &kp TILDE        &kp LBKT              &kp RBKT               &kp HASH     &kp PIPE
-&trans  &trans           &trans                         &trans                 &trans                 &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
+&trans  &sk LSHFT        &sk LCTRL                      &sk LALT               &sk LGUI               &trans    &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &kp BACKSLASH  &kp AMPERSAND
                                                         &trans                 &trans                 &trans    &kp UNDERSCORE   &kp EQUAL             &trans
             >;
         };
