@@ -43,6 +43,33 @@
             hold-while-undecided-linger;
             flavor = "tap-preferred";
         };
+
+        comma: comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA";
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        period: period {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERIOD";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        question: question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -64,19 +91,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp E               &kp R        &kp T           &kp Y      &kp U                &kp I      &kp O    &kp P
-           &kp A  &kp S  &kp D               &kp F        &kp G           &kp H      &kp J                &kp K      &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C               &kp V        &kp B           &kp N      &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
-                         &lt 3 C_PLAY_PAUSE  &lt 2 ENTER  &lt 1 ESCAPE    &kp SPACE  &mt RIGHT_SHIFT TAB  &lt 3 F5
+                              &kp Q  &kp W  &kp E               &kp R        &kp T           &kp Y      &kp U                &kp I     &kp O    &kp P
+                              &kp A  &kp S  &kp D               &kp F        &kp G           &kp H      &kp J                &kp K     &kp L    &kp SINGLE_QUOTE
+&kp LS(LC(LA(LEFT_COMMAND)))  &kp Z  &kp X  &kp C               &kp V        &kp B           &kp N      &kp M                &comma    &period  &question         &kp RS(RC(RA(RIGHT_COMMAND)))
+                                            &lt 3 C_PLAY_PAUSE  &lt 2 ENTER  &lt 1 ESCAPE    &kp SPACE  &mt RIGHT_SHIFT TAB  &lt 3 F5
             >;
         };
 
         mod_sym {
             bindings = <
-        &trans           &trans                         &trans                 &trans                 &trans                                           &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH          &kp PERCENT
-        &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &sh LC(LA(LS(LEFT_GUI))) LC(LA(LS(LEFT_GUI)))    &kp AT_SIGN      &kp LBKT              &kp RBKT               &kp DOLLAR        &kp PIPE
-&trans  &kp LG(LS(TAB))  &kp LG(TAB)                    &kp LS(LC(TAB))        &kp LC(TAB)            &kp GLOBE                                        &kp LESS_THAN    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp BACKSLASH  &kp AMPERSAND
-                                                        &trans                 &trans                 &trans                                           &kp UNDERSCORE   &kp MINUS             &trans
+               &trans           &trans                         &trans                 &trans                 &trans             &kp GRAVE        &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp HASH     &kp DOLLAR
+               &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &sh GLOBE GLOBE    &kp TILDE        &kp LBKT        &kp RBKT          &kp AT_SIGN  &kp AMPERSAND
+&kp LG(GRAVE)  &kp LG(LS(TAB))  &kp LG(TAB)                    &kp LS(LC(TAB))        &kp LC(TAB)            &kp LG(SPACE)      &kp EXCLAMATION  &kp LESS_THAN   &kp GREATER_THAN  &kp COLON    &kp PIPE       &kp BACKSLASH
+                                                               &trans                 &trans                 &trans             &kp EQUAL        &kp MINUS       &kp UNDERSCORE
             >;
         };
 
@@ -94,10 +121,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP          &kp DELETE     &kp LA(DELETE)    &kp N5           &kp N6     &kp N7     &kp N8    &kp N9
-                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN        &kp RIGHT      &kp LA(RIGHT)     &kp N0           &kp N1     &kp N2     &kp N3    &kp N4
-&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp LEFT_SHIFT  &kp LG(RIGHT)  &kp LG(DOWN)      &kp DOT          &kp PLUS   &kp MINUS  &kp STAR  &kp FSLH  &kp CARET
-                                                      &trans          &trans         &trans            &kp RIGHT_SHIFT  &kp EQUAL  &trans
+                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP          &kp DELETE     &kp LA(DELETE)    &kp N5                 &kp N6     &kp N7       &kp N8    &kp N9
+                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN        &kp RIGHT      &kp LA(RIGHT)     &kp N0                 &kp N1     &kp N2       &kp N3    &kp N4
+&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp LEFT_SHIFT  &kp LG(RIGHT)  &kp LG(DOWN)      &kp LEFT_PARENTHESIS   &kp PLUS   &kp MINUS    &kp STAR  &kp FSLH  &kp RIGHT_PARENTHESIS
+                                                      &trans          &trans         &trans            &mt RIGHT_SHIFT EQUAL  &kp CARET  &kp PERCENT
             >;
         };
 
