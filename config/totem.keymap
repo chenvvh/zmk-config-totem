@@ -112,7 +112,7 @@
         mod_sym {
             bindings = <
                &trans           &trans                         &trans                 &trans                 &DTC             &kp GRAVE        &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp HASH     &kp DOLLAR
-               &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &sk CAPSLOCK     &kp TILDE        &kp LBKT        &kp RBKT          &kp AT_SIGN  &kp AMPERSAND
+               &sh LSHFT LSHFT  &sh LEFT_CONTROL LEFT_CONTROL  &sh LEFT_ALT LEFT_ALT  &sh LEFT_GUI LEFT_GUI  &kp CAPSLOCK     &kp TILDE        &kp LBKT        &kp RBKT          &kp AT_SIGN  &kp AMPERSAND
 &kp LG(GRAVE)  &kp LG(LS(TAB))  &kp LG(TAB)                    &kp LS(LC(TAB))        &kp LC(TAB)            &kp LG(SPACE)    &kp EXCLAMATION  &kp LESS_THAN   &kp GREATER_THAN  &kp COLON    &kp PIPE       &kp BACKSLASH
                                                                &trans                 &trans                 &trans           &kp EQUAL        &kp MINUS       &kp UNDERSCORE
             >;
