@@ -90,6 +90,34 @@
             key-positions = <1 2 3 4 5 6 7 8 15 26 25 14 0 9 31>;
             timeout-ms = <18>;
         };
+
+        tgui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <13 34>;
+            timeout-ms = <18>;
+            slow-release;
+        };
+
+        talt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <12 34>;
+            timeout-ms = <18>;
+            slow-release;
+        };
+
+        tcontrol {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <11 34>;
+            timeout-ms = <18>;
+            slow-release;
+        };
+
+        tshift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <10 34>;
+            timeout-ms = <18>;
+            slow-release;
+        };
     };
 
     behaviors {
