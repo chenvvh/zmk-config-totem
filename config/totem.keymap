@@ -39,21 +39,21 @@
         };
 
         combo_we {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp C_VOL_DN>;
             key-positions = <1 2>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_er {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp C_VOL_UP>;
             key-positions = <2 3>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_rt {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp C_BRIGHTNESS_INC>;
             key-positions = <3 4>;
             timeout-ms = <20>;
             slow-release;
@@ -90,28 +90,28 @@
         // row 1
 
         combo_as {
-            bindings = <&kp LSHFT>;
+            bindings = <&kp TAB>;
             key-positions = <10 11>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_sd {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp ENTER>;
             key-positions = <11 12>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_df {
-            bindings = <&kp LSHIFT>;
+            bindings = <&LB 0 0>;
             key-positions = <12 13>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_fg {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp C_BRIGHTNESS_DEC>;
             key-positions = <13 14>;
             timeout-ms = <20>;
             slow-release;
@@ -125,7 +125,7 @@
         };
 
         combo_jk {
-            bindings = <&kp ENTER>;
+            bindings = <&kp LEFT_SHIFT>;
             key-positions = <16 17>;
             timeout-ms = <20>;
             slow-release;
@@ -206,35 +206,35 @@
         // vertical 01
 
         combo_qa {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LG(LEFT_BRACKET)>;
             key-positions = <0 10>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_ws {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LG(RIGHT_BRACKET)>;
             key-positions = <1 11>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_ed {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LS(LC(TAB))>;
             key-positions = <2 12>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_rf {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LC(TAB)>;
             key-positions = <3 13>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_tg {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LG(LS(T))>;
             key-positions = <4 14>;
             timeout-ms = <20>;
             slow-release;
@@ -671,10 +671,10 @@
 
         base {
             bindings = <
-       &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y      &kp U            &kp I          &kp O    &kp P
-       &kp A  &kp S  &kp D             &kp F         &kp G        &kp H      &kp J            &kp K          &kp L    &kp SINGLE_QUOTE
-&mo 3  &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N      &kp M            &kp COMMA      &kp DOT  &question         &kp RS(RA(RC(RIGHT_GUI)))
-                     &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 1 TAB    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+       &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y      &kp U            &kp I          &kp O    &kp P
+       &kp A  &kp S  &kp D             &kp F         &kp G          &kp H      &kp J            &kp K          &kp L    &kp SINGLE_QUOTE
+&mo 3  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N      &kp M            &kp COMMA      &kp DOT  &question         &kp RS(RA(RC(RIGHT_GUI)))
+                     &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 1 ENTER    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
