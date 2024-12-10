@@ -67,21 +67,21 @@
         };
 
         combo_ui {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp AT_SIGN>;
             key-positions = <6 7>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_io {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp AMPERSAND>;
             key-positions = <7 8>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_op {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp UNDERSCORE>;
             key-positions = <8 9>;
             timeout-ms = <20>;
             slow-release;
@@ -125,21 +125,21 @@
         };
 
         combo_jk {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_kl {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LEFT_BRACKET>;
             key-positions = <17 18>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_lsemicolon {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LEFT_BRACE>;
             key-positions = <18 19>;
             timeout-ms = <20>;
             slow-release;
@@ -183,21 +183,21 @@
         };
 
         combo_mcomma {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <27 28>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_comma_dot {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <28 29>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_dot_slash {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp RIGHT_BRACE>;
             key-positions = <29 30>;
             timeout-ms = <20>;
             slow-release;
@@ -241,7 +241,7 @@
         };
 
         combo_yh {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp GRAVE>;
             key-positions = <5 15>;
             timeout-ms = <20>;
             slow-release;
@@ -269,7 +269,7 @@
         };
 
         combo_psemicolon {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp PIPE>;
             key-positions = <9 19>;
             timeout-ms = <20>;
             slow-release;
@@ -313,7 +313,7 @@
         };
 
         combo_hn {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp TILDE>;
             key-positions = <15 26>;
             timeout-ms = <20>;
             slow-release;
@@ -327,21 +327,21 @@
         };
 
         combo_kcomma {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp SEMICOLON>;
             key-positions = <17 28>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_ldot {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp COLON>;
             key-positions = <18 29>;
             timeout-ms = <20>;
             slow-release;
         };
 
         combo_semicolon_slash {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <19 30>;
             timeout-ms = <20>;
             slow-release;
@@ -580,7 +580,7 @@
         };
 
         device {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <20 10>;
             slow-release;
         };
@@ -673,7 +673,7 @@
             bindings = <
        &kp Q  &kp W  &kp E             &kp R         &kp T    &kp Y      &kp U            &kp I          &kp O    &kp P
        &kp A  &kp S  &kp D             &kp F         &kp G    &kp H      &kp J            &kp K          &kp L    &kp SINGLE_QUOTE
-&mo 3  &kp Z  &kp X  &kp C             &kp V         &kp B    &kp N      &kp M            &kp COMMA      &kp DOT  &question         &kp RS(RA(RC(RIGHT_GUI)))
+&mo 2  &kp Z  &kp X  &kp C             &kp V         &kp B    &kp N      &kp M            &kp COMMA      &kp DOT  &question         &mo 3
                      &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 1    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
@@ -699,21 +699,12 @@
             >;
         };
 
-        sym {
+        numpad {
             bindings = <
-           &kp GRAVE       &kp EXCLAMATION       &kp AT_SIGN            &kp UNDERSCORE    &kp AMPERSAND    &kp N5       &kp N6    &kp N7      &kp N8    &kp N9
-           &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE   &kp PIPE         &kp N0       &kp N1    &kp N2      &kp N3    &kp N4
-&kp TILDE  &kp LESS_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp BACKSLASH    &kp PERCENT  &kp PLUS  &kp MINUS   &kp STAR  &kp FSLH  &kp CARET
-                                                 &trans                 &trans            &trans           &kp EQUAL    &kp HASH  &kp DOLLAR
-            >;
-        };
-
-        media {
-            bindings = <
-        &trans  &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-        &trans  &kp C_MUTE        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&trans  &trans  &kp C_PLAY_PAUSE  &kp C_PREVIOUS        &kp C_NEXT            &trans    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
-                                  &trans                &trans                &trans    &trans   &trans   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N0  &kp N1  &kp N2  &kp N3  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -731,10 +722,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
-        &trans        &trans        &trans        &trans        &bt BT_CLR      &trans  &trans  &trans  &trans  &trans
-&trans  &kp A         &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+        &trans        &trans        &trans        &trans        &bt BT_CLR      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+&trans  &kp A         &trans        &trans        &trans        &trans          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+                                    &trans        &trans        &trans          &trans   &trans   &trans
             >;
         };
 
