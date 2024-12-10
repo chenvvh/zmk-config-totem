@@ -9,7 +9,6 @@
 / {
     chosen {
 		zmk,physical-layout = &default_layout;
-		zmk,studio-rpc-uart = &uart1;
     };
 
     default_transform: default_transform {
