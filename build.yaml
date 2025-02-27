@@ -5,4 +5,4 @@ include:
     shield: totem_right
     include:
   - board: seeeduino_xiao_ble
-    shield: totem_dongle prospector_adapter
+    shield: settings_reset
